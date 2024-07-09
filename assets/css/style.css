@@ -1,7 +1,15 @@
+body {
+    padding-bottom: 50px; /* Ensure there's padding at the bottom of the page */
+}
+
+
+
+
 h1 {
 font-size: 90px;
 display: flex;
 justify-content: center;
+
 
 
 }
@@ -18,8 +26,10 @@ justify-content: space-evenly;
 position: relative;
 width: 300px;
 height: 100px;
-background-color: black;
-border-radius: 50px;
+top: 20px;
+background-color: rgb(32, 97, 201);
+border-radius: 20px;
+
 
 
 }
@@ -29,8 +39,9 @@ border-radius: 50px;
 position: relative;
 width: 300px;
 height: 100px;
-background-color: rgb(0, 0, 0);
-border-radius: 50px;
+top: 20px;
+background-color: rgb(32, 97, 201);
+border-radius: 20px;
 
 
 
@@ -40,8 +51,9 @@ border-radius: 50px;
 position: relative;
 width: 300px;
 height: 100px;
-background-color: black;
-border-radius: 50px;
+top: 20px;
+background-color: rgb(32, 97, 201);
+border-radius: 20px;
 
 
 
@@ -64,7 +76,8 @@ color: rgb(255, 255, 255);
 text-decoration: none;
 display: flex;
 justify-content: center;
-    
+
+
     
     }
 
@@ -74,7 +87,6 @@ color: rgb(255, 255, 255);
 text-decoration: none;
 display: flex;
 justify-content: center;
-
 
 }
 
@@ -90,15 +102,27 @@ top: 200px;
 }
 
 .card {
-width: 500px;
-height: 700px;
-background-color: lightgray;
 position: relative;
-left: 520px;
-top: 120px;
-
-
+left: 350px;
+background-color: rgb(217, 217, 217);
+border-radius: 30px;
+top: 30px;
 }
+
+.btn {
+position: relative;
+left: 274px;
+top: 360px;
+background-color: rgb(32, 97, 201);
+}
+
+.card-title {
+display: flex;
+justify-content: center;
+}
+
+
+
 
 
 
