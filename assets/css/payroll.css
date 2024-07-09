@@ -12,6 +12,7 @@ h1 {
     font-weight: bold;
     font-size: 410%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 3px 3px 3px black;
 }
 
 nav {
@@ -32,6 +33,7 @@ nav li {
     margin: 0 20px;
     width: 200px;
     text-align: center;
+    margin: 7px 49px auto;
 }
 
 nav a {
@@ -40,8 +42,16 @@ nav a {
     color: rgb(255, 255, 255);
     font-size: 150%;
     text-decoration: none;
-    border: solid 3px rgb(0, 0, 0);
+    border: solid 3px rgb(11, 211, 44);
+    box-shadow: 2px 0 4px rgb(11, 211, 44);
     border-radius: 7px;
+    padding: 5px 0;
+    text-shadow: 2px 3px 3px black;
+}
+
+nav a:hover {
+    color: yellow;
+    text-shadow: 2px 2px 2px rgb(97, 13, 207);
 }
 
 
