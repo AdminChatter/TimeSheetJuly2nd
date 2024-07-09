@@ -14,7 +14,8 @@ const formSubmission = () => {
     }else{
         const payInfo = {
             payrate,
-            company
+            company,
+            workhour: 0
         };
 
         //store the user information in local storage
