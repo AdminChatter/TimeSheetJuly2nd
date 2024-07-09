@@ -89,6 +89,17 @@ top: 200px;
 
 }
 
+.card {
+width: 500px;
+height: 700px;
+background-color: lightgray;
+position: relative;
+left: 520px;
+top: 120px;
+
+
+}
+
 
 
 
