@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Sheet</title>
@@ -11,22 +10,17 @@
     <link href="assets/css/reset.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
-    
-
 </head>
 
 <body>
 
 <header>
-
     <h1>Time Card</h1>
 
     <nav>
-
         <ul>
-
             <li>
-               <a href="index.html">Time Card</a> 
+                <a href="index.html">Time Card</a> 
             </li>
 
             <li>
@@ -38,34 +32,25 @@
             </li>
 
         </ul>
-
     </nav>
 
     <h2>Company</h2>
-
 </header>
 
 <main>
+    <section>
+        <div class="hours" id = 'timer'>
+        </div>
 
-<section>
-    
-    <div class="hours">
-    </div>
+        <select class="company" id = 'companyList'>
+        </select>
 
-    <div class="company">
-    </div>
-
-    <div class="clockInOut">
-    </div>
-
-</section>
-
-
-
+        <button class="clockInOut" id = 'toggle'>
+        </button>
+    </section>
 </main>
 
-    <script src="/assets/js/script.js"></script>
-
+    <script src="assets/js/timeCard.js"></script>
 </body>
 
 </html>
