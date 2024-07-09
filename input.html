@@ -16,34 +16,39 @@
 
 <body>
 
-<header>
+    <header>
+        <h1>Input</h1>
+        <nav>
+            <ul
+                <li>
+                    <a href="index.html">Time Card</a> 
+                </li>
 
-    <h1>Input</h1>
+                <li>
+                    <a href="payroll.html">Payroll</a>
+                </li>
 
-    <nav>
+                <li>
+                    <a href="input.html">Input</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-        <ul>
+    <section>
+        <form>
+            <label for="companyName">Company: </label><br>
+            <input type="text" name="companyName" id="companyName"><br>
 
-            <li>
-               <a href="index.html">Time Card</a> 
-            </li>
+            <label for="payRate">Payrate: </label><br>
+            <input type="text" name="payRate" id="payRate"><br>
 
-            <li>
-                <a href="payroll.html">Payroll</a>
-            </li>
-
-            <li>
-                <a href="input.html">Input</a>
-            </li>
-
-        </ul>
-
-    </nav>
+            <input type="submit" value="submit">
+        </form>
+    </section>
     
-</header>
 
-    <script src="/assets/js/script.js"></script>
-
+    <script src="/assets/js/inputPage.js"></script>
 </body>
 
 </html>
