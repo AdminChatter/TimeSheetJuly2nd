@@ -1,7 +1,95 @@
 h1 {
+font-size: 90px;
 display: flex;
 justify-content: center;
 
 
 }
+
+
+.navs {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+
+
+}
+.box1 {
+position: relative;
+width: 300px;
+height: 100px;
+background-color: black;
+border-radius: 50px;
+
+
+}
+
+
+.box2 {
+position: relative;
+width: 300px;
+height: 100px;
+background-color: rgb(0, 0, 0);
+border-radius: 50px;
+
+
+
+}
+
+.box3{
+position: relative;
+width: 300px;
+height: 100px;
+background-color: black;
+border-radius: 50px;
+
+
+
+}
+
+.box1 a {
+font-size: 50px;
+color: rgb(255, 255, 255);
+text-decoration: none;
+display: flex;
+justify-content: center;
+
+
+
+}
+
+.box2 a {
+font-size: 50px;
+color: rgb(255, 255, 255);
+text-decoration: none;
+display: flex;
+justify-content: center;
+    
+    
+    }
+
+.box3 a {
+font-size: 50px;
+color: rgb(255, 255, 255);
+text-decoration: none;
+display: flex;
+justify-content: center;
+
+
+}
+
+h2 {
+display: flex;
+flex-direction: row;
+justify-content: center;
+position: relative;
+top: 200px;
+
+
+
+}
+
+
+
+
 
