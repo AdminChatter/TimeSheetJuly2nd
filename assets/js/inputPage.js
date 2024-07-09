@@ -21,7 +21,7 @@ const formSubmission = (event) => {
     event.preventDefault();
 
     const payRate = document.getElementById('payRate').value;
-    const userCompany = document.getElementById('company').value;
+    const userCompany = document.getElementById('companyName').value;
 
     if (validInput(payRate, userCompany)) {
         const payInfo = {

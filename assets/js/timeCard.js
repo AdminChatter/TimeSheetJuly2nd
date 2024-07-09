@@ -108,7 +108,6 @@ toggle.addEventListener('click', function() {
     }
 })
 
-
 const initial = () => {
     selectListValue();
     cleanPage();
