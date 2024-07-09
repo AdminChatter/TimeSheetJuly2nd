@@ -1,5 +1,10 @@
+
+
+
 body {
     padding-bottom: 50px; /* Ensure there's padding at the bottom of the page */
+    background-color: azure;
+    
 }
 
 
@@ -65,6 +70,8 @@ color: rgb(255, 255, 255);
 text-decoration: none;
 display: flex;
 justify-content: center;
+position: relative;
+right: 5px;
 
 
 
@@ -76,10 +83,7 @@ color: rgb(255, 255, 255);
 text-decoration: none;
 display: flex;
 justify-content: center;
-
-
-    
-    }
+}
 
 .box3 a {
 font-size: 50px;
@@ -103,7 +107,7 @@ top: 200px;
 
 .card {
 position: relative;
-left: 350px;
+left: 339px;
 background-color: rgb(217, 217, 217);
 border-radius: 30px;
 top: 30px;
@@ -111,7 +115,7 @@ top: 30px;
 
 .btn {
 position: relative;
-left: 274px;
+left: 270px;
 top: 360px;
 background-color: rgb(32, 97, 201);
 }
