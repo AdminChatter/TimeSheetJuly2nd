@@ -1,14 +1,15 @@
-const selectList = document.getElementById('companyList');
+let selectList = document.getElementById('companyList');
 const toggle = document.getElementById('toggle');
 const clockTimer = document.getElementById('timer');
-const existingData = JSON.parse(localStorage.getItem(payinfo));
-let currentCompany = '';
-let timeStop = true;
+const existingData = JSON.parse(localStorage.getItem('payInfo'));
+let currentCompany;
 let hr = 0, min = 0, sec = 0;
+let countStart;
 
 //reset the textcontent for the page
 const cleanPage = () => {
     hr = 0, min = 0, sec = 0;
+    
     clockTimer.textContent = `${hr} hours ${min} mins ${sec} secs`;
     toggle.textContent = 'Clock In';
 }
@@ -26,7 +27,11 @@ const selectListValue = () => {
     const userInfo = JSON.parse(localStorage.getItem('payInfo'));
 
     if (!userInfo) {
-        company.textContent = 'No Company Avaliable';
+        // company.textContent = 'No Company Avaliable';
+        const option = document.createElement('option');
+        option.textContent = 'No Company Avaliable';
+        option.value = 'No Company Avaliable';
+        selectList.appendChild(option)
     }else {
         userInfo.forEach(createOptionList);
     }
@@ -36,6 +41,7 @@ const selectListValue = () => {
 selectList.addEventListener('change', function (event) {
     event.preventDefault();
     currentCompany = selectList.value;
+    console.log(currentCompany)
 });
 
 //display the time and change the value
@@ -59,7 +65,6 @@ const timeChange = () => {
 
 //Convert time into hour
 const convertHRS = () => {
-    clearInterval(timeInterval);
     if (min <= 15 && min >= 5){
         hr += 0.25;
     } else if (min <= 30 && min > 15){
@@ -74,10 +79,12 @@ const convertHRS = () => {
 //Update the working hour to specific company
 const updateWorkHour = () => {
     convertHRS();
-    for (let i = 0; i++; i <= existingData.length){
+    for (let i = 0;  i < existingData.length; i++){
         if(existingData[i].company === currentCompany){
             existingData[i].workhour += hr;
-                window.localStorage.setItem(JSON.stringify(existingData))
+            console.log(existingData[i].workhour)
+            window.localStorage.setItem('payInfo',JSON.stringify(existingData))
+            console.log(JSON.parse(localStorage.getItem('payInfo')))
         }
     }
 }
@@ -85,24 +92,18 @@ const updateWorkHour = () => {
 //Clock In/Clock Out
 toggle.addEventListener('click', function() {
     if (toggle.textContent === 'Clock In'){
-        timeStop = false
         if (currentCompany === 'No Company Avaliable'){
             window.alert('No company selected.\n Please go to input page to enter your company!')
             return;
         }else {
             toggle.textContent = 'Clock Out'
-            const countStart = setInterval(() => {
+            countStart = setInterval(() => {
                 timeChange();
-            }, 1000);
-            if (timeStop) {
-                clearInterval(countStart);
-            };
+            }, 10);
         }
     }else {
-        //Stop the time interval
-        timeStop = true
         window.alert(`You worked ${hr} hours ${min} mins ${sec} secs. \n Good Job! Keep it up 💪`);
-
+        clearInterval(countStart);
         updateWorkHour();
         cleanPage();
     }
@@ -111,6 +112,7 @@ toggle.addEventListener('click', function() {
 const initial = () => {
     selectListValue();
     cleanPage();
+    currentCompany = selectList.value;
 }
 
 //Call the function to create the content
