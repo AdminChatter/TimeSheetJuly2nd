@@ -8,7 +8,7 @@ const validInput = (payrate, company) => {
     }else if (!company){
         window.alert('Missing Company Input!');
         return false;
-    }else if (typeof payrate !== "number"){
+    }else if (isNaN(Number(payrate))){
         window.alert('The payrate need to be an number.');
         return false;
     } else {
@@ -20,19 +20,25 @@ const validInput = (payrate, company) => {
 const formSubmission = (event) => {
     event.preventDefault();
 
-    const payRate = document.getElementById('payRate').value;
-    const userCompany = document.getElementById('companyName').value;
+    const payrate = document.getElementById('payRate').value;
+    const company = document.getElementById('companyName').value;
 
-    if (validInput(payRate, userCompany)) {
+    if (validInput(payrate, company)) {
+        console.log('in if')
         const payInfo = {
             payrate,
             company,
             workhour: 0,
         };
         //store the user information in local storage
-        const existingData = JSON.parse(localStorage.getItem('payInfo'));
-        existingData.push(payInfo);
-        localStorage.setItem('payInfo',JSON.stringify('payInfo'));
+        let existingData = localStorage.getItem('payInfo');
+        if (existingData){
+            existingData = JSON.parse(existingData);
+            existingData.push(payInfo);
+            localStorage.setItem('payInfo',JSON.stringify(existingData));
+        }else {
+            localStorage.setItem('payInfo',JSON.stringify([payInfo]));
+        }
     }
 }
 
