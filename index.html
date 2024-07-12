@@ -34,17 +34,21 @@
 </header>
 
 <main>
-    <section>
-        <div class="hours">
-            <p id = 'timer'></p>
+    <div class="bigBox">
+        <div class="card">
+            <div class="timer-container">
+                <p id="timer">00:00:00</p>
+            </div>
+            <div class="bottom-container">
+                <label for="company">Company:</label>
+                <select class="company" id="companyList">
+                    <!-- Options will go here -->
+                </select>
+                <button class="clockInOut" id="toggle">Clock in / Out</button>
+            </div>
         </div>
-        
-        <label for="company">Company:</label>
-        <select class="company" id = 'companyList'></select>
-
-        <button class="clockInOut" id = 'toggle'> Clock in / Out
-        </button>
-    </section>
+    </div> 
+   
 </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

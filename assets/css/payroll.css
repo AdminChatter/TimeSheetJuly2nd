@@ -20,7 +20,7 @@ nav {
     margin-top: 45px;
     display: flex;
     justify-content: center;
-    
+
 }
 
 nav ul {
@@ -39,7 +39,7 @@ nav li {
 
 nav a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display:block;
+    display: block;
     color: rgb(255, 255, 255);
     font-size: 150%;
     text-decoration: none;
@@ -52,6 +52,15 @@ nav a {
     background-repeat: no-repeat;
 }
 
+.container {
+display: flex;
+justify-content: center;
+position: relative;
+top: 100px;
+
+
+}
+
 
 .payrollContainer {
     width: 670px;
@@ -60,9 +69,7 @@ nav a {
     box-shadow: 2px 0 4px rgb(11, 211, 44);
     background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
     border-radius: 12px;
-    position: relative;
-    left: 430px;
-    top: 100px;
+   
 }
 
 
@@ -81,13 +88,30 @@ nav a {
 label {
     position: relative;
     left: 240px;
-    top:  335px;
+    top: 335px;
     color: white;
-    }
+}
 
 nav a:hover {
     color: yellow;
     text-shadow: 2px 2px 2px rgb(97, 13, 207);
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+    }
 }
