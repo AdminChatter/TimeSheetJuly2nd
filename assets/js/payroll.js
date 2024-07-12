@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to calculate and display payroll information
     const calculatePayroll = (hoursWorked, payRate) => {
         const totalIncome = hoursWorked * payRate;
+        const hoursWorkedElement = document.getElementById('hoursWorkedValue');
+        const payRateElement = document.getElementById('payRateValue');
+        const totalIncomeElement = document.getElementById('totalIncomeValue');
         document.getElementById('hoursWorked').textContent = hoursWorked.toFixed(2);
         document.getElementById('payRate').textContent = payRate.toFixed(2);
         document.getElementById('totalIncome').textContent = totalIncome.toFixed(2);
@@ -43,16 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Navigation buttons event listeners
-    document.getElementById('timecardBtn').addEventListener('click', function() {
-        window.location.href = 'index.html';
-    });
 
-    document.getElementById('payrollBtn').addEventListener('click', function() {
-        window.location.href = 'payroll.html';
     });
-
-    document.getElementById('inputBtn').addEventListener('click', function() {
-        window.location.href = 'input.html';
-    });
-});
+;
