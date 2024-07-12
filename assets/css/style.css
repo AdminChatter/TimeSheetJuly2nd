@@ -79,8 +79,7 @@ nav a:hover {
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -89,14 +88,31 @@ nav a:hover {
 .timer-container {
     display: flex;
     justify-content: center;
-    position: relative;
-    right: 180px;
     width: 100%;
 }
 
-#timer {
+#hours {
+    display: flex;
     font-size: 2em;
     color: white;
+    justify-content: center;
+    margin: 20px;
+}
+
+#minutes {
+    display: flex;
+    font-size: 2em;
+    color: white;
+    justify-content: center;
+    margin: 20px;
+}
+
+#seconds {
+    display: flex;
+    font-size: 2em;
+    color: white;
+    justify-content: center;
+    margin: 20px;
 }
 
 .bottom-container {
@@ -109,6 +125,7 @@ nav a:hover {
 label {
     color: white;
     margin-right: 10px;
+    font-size: 22px;
 }
 
 .company {
@@ -129,9 +146,6 @@ label {
     border-radius: 7px;
 }
 
-
-
-
 #timer {
     color: white;
     position: relative;
@@ -140,13 +154,10 @@ label {
     font-size: 50px;
 }
 
-
-
 .clockInOut:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-
 
 .clockInOut:active {
     transform: none;
