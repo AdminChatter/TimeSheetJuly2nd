@@ -167,6 +167,11 @@ label {
         justify-content: center;
         flex-flow: column wrap;
     }
+    .bigBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -183,5 +188,10 @@ label {
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
+    }
+    .bigBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
