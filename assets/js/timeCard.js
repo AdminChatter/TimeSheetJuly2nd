@@ -99,7 +99,7 @@ toggle.addEventListener('click', function() {
             toggle.textContent = 'Clock Out'
             countStart = setInterval(() => {
                 timeChange();
-            }, 10);
+            }, 1000);
         }
     }else {
         window.alert(`You worked ${hr} hours ${min} mins ${sec} secs. \n Good Job! Keep it up 💪`);
