@@ -33,12 +33,13 @@ const companyExist = (payInfo) => {
                 }else if (existingData[i].payrate != payInfo.payrate){
                     window.alert(`The payrate for this company has been updated`);
                     existingData[i].payrate = payInfo.payrate;
-                    localStorage.setItem('payInfo',JSON.stringify([payInfo]))
+                    localStorage.setItem('payInfo',JSON.stringify([payInfo]));
                     return true;
                 }else {
                     return false;
                 }
             }else{
+                window.alert(`Company ${payInfo.company} has been added`);
                 return false;
             }
         }
