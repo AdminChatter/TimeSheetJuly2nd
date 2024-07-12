@@ -85,12 +85,12 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+
 .timer-container {
     display: flex;
     justify-content: center;
     position: relative;
     right: 180px;
-    
     width: 100%;
 }
 
@@ -150,4 +150,21 @@ label {
 
 .clockInOut:active {
     transform: none;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+    }
 }
