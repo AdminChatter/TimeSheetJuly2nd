@@ -99,6 +99,23 @@ nav a:hover {
     transition: transform 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 920px) {
+    header {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+    }
+}
+
 @media screen and (max-width: 768px) {
     header {
         flex-flow: column wrap;
