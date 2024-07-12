@@ -60,20 +60,65 @@ nav a:hover {
 }
 
 
+.bigBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    height: 100%;
+    width: 100%;
+}
 
-
-.hours {
+.card {
     width: 670px;
     height: 415px;
     border: solid 3px rgb(11, 211, 44);
     box-shadow: 2px 0 4px rgb(11, 211, 44);
     background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
     border-radius: 12px;
-    position: relative;
-    left: 430px;
-    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 180px;
+    width: 100%;
+}
+
+#timer {
+    font-size: 2em;
+    color: white;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    color: white;
+    margin-right: 10px;
+}
+
+.company {
+    width: 100px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: grey;
+    border: solid 2px rgb(255, 255, 255);
+    margin-right: 10px;
+}
 
 .clockInOut {
     width: 130px;
@@ -82,30 +127,17 @@ nav a:hover {
     background-color: grey;
     color: white;
     border-radius: 7px;
-    position: relative;
-    left: 405px;
-    top: 18px;
 }
 
 
-.company {
-    position: relative;
-    width: 100px;
-    height: 35px;
-    top: 20px;
-    left: 770px;
-    border-radius: 7px;
-    background-color: grey;
-    border: solid 2px rgb(255, 255, 255);
 
 
-}
-
-label {
-    position: relative;
-    left: 760px;
-    top: 16px;
+#timer {
     color: white;
+    position: relative;
+    left: 180px;
+    top: 150px;
+    font-size: 50px;
 }
 
 

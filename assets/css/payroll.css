@@ -52,6 +52,15 @@ nav a {
     background-repeat: no-repeat;
 }
 
+.container {
+display: flex;
+justify-content: center;
+position: relative;
+top: 100px;
+
+
+}
+
 
 .payrollContainer {
     width: 670px;
@@ -60,9 +69,7 @@ nav a {
     box-shadow: 2px 0 4px rgb(11, 211, 44);
     background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
     border-radius: 12px;
-    position: relative;
-    left: 430px;
-    top: 100px;
+   
 }
 
 
