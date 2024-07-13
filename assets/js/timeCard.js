@@ -1,7 +1,8 @@
 let selectList = document.getElementById('companyList');
-const toggle = document.getElementById('toggle');
-const clockTimer = document.getElementById('timer');
-const existingData = JSON.parse(localStorage.getItem('payInfo'));
+const clockButton = document.getElementById('toggle');
+const hrCount = document.getElementById('hours');
+const minCount = document.getElementById('minutes');
+const secCount = document.getElementById('seconds')
 let currentCompany;
 let hr = 0, min = 0, sec = 0;
 let countStart;
@@ -10,8 +11,10 @@ let countStart;
 const cleanPage = () => {
     hr = 0, min = 0, sec = 0;
     
-    clockTimer.textContent = `${hr} hours ${min} mins ${sec} secs`;
-    toggle.textContent = 'Clock In';
+    hrCount.textContent = `${hr} hours`;
+    minCount.textContent =  `${min} mins`;
+    secCount.textContent = `${sec} secs`;
+    clockButton.textContent = 'Clock In';
 }
 
 //Build the elements and append it to the select list
@@ -51,15 +54,21 @@ const timeChange = () => {
             sec = 0
             min = 0;
             hr ++;
-            clockTimer.textContent = `${hr} hours ${min} mins ${sec} secs`;
+            hrCount.textContent = `${hr} hours`;
+            minCount.textContent =  `${min} mins`;
+            secCount.textContent = `${sec} secs`;
         }else{
             sec = 0;
             min ++;
-            clockTimer.textContent = `${hr} hours ${min} mins ${sec} secs`;
+            hrCount.textContent = `${hr} hours`;
+            minCount.textContent =  `${min} mins`;
+            secCount.textContent = `${sec} secs`;
         }
     }else{
         sec ++;
-        clockTimer.textContent = `${hr} hours ${min} mins ${sec} secs`;
+        hrCount.textContent = `${hr} hours`;
+        minCount.textContent =  `${min} mins`;
+        secCount.textContent = `${sec} secs`;
     }
 }
 
@@ -79,6 +88,7 @@ const convertHRS = () => {
 //Update the working hour to specific company
 const updateWorkHour = () => {
     convertHRS();
+    const existingData = JSON.parse(localStorage.getItem('payInfo'));
     for (let i = 0;  i < existingData.length; i++){
         if(existingData[i].company === currentCompany){
             existingData[i].workhour += hr;
@@ -90,16 +100,16 @@ const updateWorkHour = () => {
 }
 
 //Clock In/Clock Out
-toggle.addEventListener('click', function() {
-    if (toggle.textContent === 'Clock In'){
-        if (currentCompany === 'No Company Avaliable'){
+clockButton.addEventListener('click', function() {
+    if (clockButton.textContent === 'Clock In'){
+        if (currentCompany === 'N/A'){
             window.alert('No company selected.\n Please go to input page to enter your company!')
             return;
         }else {
-            toggle.textContent = 'Clock Out'
+            clockButton.textContent = 'Clock Out'
             countStart = setInterval(() => {
                 timeChange();
-            }, 10);
+            }, 1000);
         }
     }else {
         window.alert(`You worked ${hr} hours ${min} mins ${sec} secs. \n Good Job! Keep it up 💪`);
@@ -111,6 +121,7 @@ toggle.addEventListener('click', function() {
 
 const initial = () => {
     selectListValue();
+
     cleanPage();
     currentCompany = selectList.value;
 }

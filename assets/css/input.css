@@ -76,14 +76,12 @@ main {
     box-sizing: border-box;
 }
 
-
 form {
     position: relative;
     color: white;
     left: 150px;
     top: 90px;
 }
-
 
 #companyName {
     border-radius: 7px;
