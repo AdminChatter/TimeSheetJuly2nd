@@ -15,9 +15,7 @@
 </head>
 
 <body>
-
 <header>
-
     <h1>Payroll</h1>
 
     <nav>
@@ -43,26 +41,30 @@
 </header>
 
 <main>
-<section class="container">
-  <section class="payrollContainer">
+    <section class="container">
+        <section class="payrollContainer">
 
-    <div>
-        <label for="company">Company:</label>
-        <select class="companyInfo" id="companyList"></select>
-    </div>
+            <div>
+                <label for="company">Company:</label>
+                <select class="companyInfo" id="companyList"></select>
+            </div>
 
+            <div class="payrollInfo" id="payrollData">
+                <p class="hoursWorked" id="hoursWorked"></p>
+                <p class="payRate" id="payRate"></p>
+                <p class="totalIncome" id="totalIncome"></p>
+            </div>
     <div class="payrollInfo" id="payrollData">
         <div class="hoursWorked" id="hoursWorked">Hours Worked: <span></span></div>
         <div class="payRate" id="payRate">Pay Rate: <span></span></div>
         <div class="totalIncome" id="totalIncome">Total Income: <span></span></div>
     </div>
 
-  </section>
-</section> 
-
+        </section>
+    </section> 
 </main>
 
-        <script src="path/to/payroll.js"></script>
+    <script src="./assets/js/payroll.js"></script>
 
 </body>
 
