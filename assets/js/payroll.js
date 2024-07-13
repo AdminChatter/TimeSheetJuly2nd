@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const hoursWorkedDiv = document.getElementById('hoursWorked');
+    const payRateDiv = document.getElementById('payRate');
+    const totalIncomeDiv = document.getElementById('totalIncome');
     const selectList = document.getElementById('companyList');
-    let currentCompany = '';
 
     // Function to populate the company select list
     const selectListValue = () => {
@@ -33,26 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
     selectListValue();
 
     // Event listener for the select list change
-    selectList.addEventListener('change', function(event) {
-        currentCompany = selectList.value;
-        const userInfo = JSON.parse(localStorage.getItem('payInfo')) || [];
-        const companyData = userInfo.find(info => info.company === currentCompany);
+    selectList.addEventListener('change', (event) => {
+        const selectedCompany = event.target.value;
+        const payInfo = JSON.parse(localStorage.getItem('payInfo')) || [];
+        const companyInfo = payInfo.find(info => info.company === selectedCompany);
 
-        if (companyData) {
-            calculatePayroll(companyData.workhour, companyData.payrate);
+        if (companyInfo) {
+            // Assuming hoursWorked is obtained from another source (timecard.js)
+            const hoursWorked = 40; // Placeholder value, replace with actual value
+            const payRate = parseFloat(companyInfo.payrate);
+            calculatePayroll(hoursWorked, payRate);
         }
     });
-
-    // Navigation buttons event listeners
-    document.getElementById('timecardBtn').addEventListener('click', function() {
-        window.location.href = 'index.html';
     });
-
-    document.getElementById('payrollBtn').addEventListener('click', function() {
-        window.location.href = 'payroll.html';
-    });
-
-    document.getElementById('inputBtn').addEventListener('click', function() {
-        window.location.href = 'input.html';
-    });
-});
