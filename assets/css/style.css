@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 
-.bigBox {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,15 +78,13 @@ nav a:hover {
     background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
     border-radius: 12px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
 }
 
-
-.timer-container {
+.timerContainer {
     display: flex;
     justify-content: center;
     position: relative;
@@ -99,7 +97,7 @@ nav a:hover {
     color: white;
 }
 
-.bottom-container {
+.bottomContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,9 +127,6 @@ label {
     border-radius: 7px;
 }
 
-
-
-
 #timer {
     color: white;
     position: relative;
@@ -140,13 +135,10 @@ label {
     font-size: 50px;
 }
 
-
-
 .clockInOut:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-
 
 .clockInOut:active {
     transform: none;
@@ -167,10 +159,13 @@ label {
         justify-content: center;
         flex-flow: column wrap;
     }
-    .bigBox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    nav a {
+        margin: 5px;
+    }
+    .card {
+        text-align: center;
+        max-width: 85%;
+        margin: 20px auto 20px auto;
     }
 }
 
@@ -189,9 +184,9 @@ label {
         justify-content: center;
         flex-flow: column wrap;
     }
-    .bigBox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .card {
+        text-align: center;
+        max-width: 85%;
+        margin: 20px auto 20px auto;
     }
 }
