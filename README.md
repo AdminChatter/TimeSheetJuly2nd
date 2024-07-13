@@ -5,10 +5,17 @@
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
 - What was your motivation?
+We chose this Timesheet to be our project because it's something that would be useful and secure for many workers in a daily basis, being able to render in many different screen sizes.
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+This project is a helping tool for a worker to be rightfully paid by the company they work for. Using HTML, CSS and JavaScript.
 - What problem does it solve?
-- What did you learn?
+On this APP, the user will:
+-Type in the company that they work for and the payrate from the company;
+-Clock in/out to determine how many hours the person has worked;
+-See how many hours and the total income for the company they worked for.
 
+- What did you learn?
+-Leo: Have learned a lot of javascript and its relation to html; learned how to store and retrieve data using localStorage; learned about event handling in JavaScript, Data Parsing and Manipulation, etc.
 ## Table of Contents (Optional)
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
