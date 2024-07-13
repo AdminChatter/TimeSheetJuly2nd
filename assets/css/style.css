@@ -78,7 +78,6 @@ main {
     background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
     border-radius: 12px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -86,7 +85,7 @@ main {
 }
 
 
-.timer-container {
+.timerContainer {
     display: flex;
     justify-content: center;
     position: relative;
@@ -99,7 +98,7 @@ main {
     color: white;
 }
 
-.bottom-container {
+.bottomContainer {
     display: flex;
     justify-content: center;
     align-items: center;
