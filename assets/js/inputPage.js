@@ -1,7 +1,6 @@
 const form = document.querySelector('form');
 const payInput = document.getElementById('payRate');
 const companyInput = document.getElementById('companyName');
-
 //Check the validation of the input
 const validInput = (payrate, company) => {
     if (!payrate){
@@ -17,7 +16,6 @@ const validInput = (payrate, company) => {
         return true;
     }
 }
-
 //Check if the company already exists. If it does, check if the payrate is the same. If yes, update the payrate
 const companyExist = (payInfo) => {
     let existingData = localStorage.getItem('payInfo');
@@ -45,9 +43,7 @@ const companyExist = (payInfo) => {
         }
     }
 }
-
 //Store the valid input value into localstorage
-
 const storeInput = (payInfo) => {
     let existingData = localStorage.getItem('payInfo');
     if (existingData){
@@ -58,30 +54,24 @@ const storeInput = (payInfo) => {
         localStorage.setItem('payInfo',JSON.stringify([payInfo]));
     }
 }
-
 //Handles the form submission. Grab the form data and store it in local storage
 const formSubmission = (event) => {
     event.preventDefault();
-
     const payrate = document.getElementById('payRate').value;
     const company = document.getElementById('companyName').value;
-
     if (validInput(payrate, company)) {
         payInput.value = "";
         companyInput.value = "";
-
         const payInfo = {
             payrate,
             company,
             workhour: 0,
         };
-
         //store the user information in local storage
         if (!companyExist(payInfo)){
             storeInput(payInfo);
         }
     }
 }
-
 //Call the function to handle the form submission
 form.addEventListener('submit', formSubmission)
