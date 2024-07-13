@@ -52,16 +52,11 @@ nav a {
     background-repeat: no-repeat;
 }
 
-.container {
-display: flex;
-justify-content: center;
-position: relative;
-top: 100px;
-}
-
-
-
 .formBox {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
     width: 590px;
     height: 415px;
     border: solid 3px rgb(11, 211, 44);
@@ -69,7 +64,7 @@ top: 100px;
     background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
     border-radius: 12px;
 
-    }
+}
 
 
 form {
@@ -125,15 +120,26 @@ nav a:hover {
         flex-flow: column wrap;
         justify-content: center;
     }
+
     nav {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     nav ul {
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+    .formBox {
+        text-align: center;
+        max-width: 85%;
+        margin: 20px auto 20px auto;
     }
 }
 
@@ -142,14 +148,23 @@ nav a:hover {
         flex-flow: column wrap;
         justify-content: center;
     }
+
     nav {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     nav ul {
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
     }
+
+    .formBox {
+        text-align: center;
+        max-width: 85%;
+        margin: 20px auto 20px auto;
+    }
+
 }
