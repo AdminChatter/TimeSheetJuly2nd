@@ -163,6 +163,24 @@ footer p {
         margin: 5px;
     }
 
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10px;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+        top: 30px;
+    }
+
     .payrollContainer {
         text-align: center;
         max-width: 85%;

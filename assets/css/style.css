@@ -172,19 +172,41 @@ footer p {
         flex-flow: column wrap;
         justify-content: center;
     }
+
     nav {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     nav ul {
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
     }
+
     nav a {
         margin: 5px;
     }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10px;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+        top: 50px;
+    }
+
     .card {
         text-align: center;
         max-width: 85%;
@@ -197,16 +219,19 @@ footer p {
         flex-flow: column wrap;
         justify-content: center;
     }
+
     nav {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     nav ul {
         display: flex;
         justify-content: center;
         flex-flow: column wrap;
     }
+    
     .card {
         text-align: center;
         max-width: 85%;
