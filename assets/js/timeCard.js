@@ -11,9 +11,9 @@ let countStart;
 const cleanPage = () => {
     hr = 0, min = 0, sec = 0;
     
-    hrCount.textContent = `${hr} hours`;
-    minCount.textContent =  `${min} mins`;
-    secCount.textContent = `${sec} secs`;
+    hrCount.textContent = `${hr} HR`;
+    minCount.textContent =  `${min} Min`;
+    secCount.textContent = `${sec} Sec`;
     clockButton.textContent = 'Clock In';
 }
 
@@ -53,21 +53,21 @@ const timeChange = () => {
             sec = 0
             min = 0;
             hr ++;
-            hrCount.textContent = `${hr} hours`;
-            minCount.textContent =  `${min} mins`;
-            secCount.textContent = `${sec} secs`;
+            hrCount.textContent = `${hr} HR`;
+            minCount.textContent =  `${min} Min`;
+            secCount.textContent = `${sec} Sec`;
         }else{
             sec = 0;
             min ++;
-            hrCount.textContent = `${hr} hours`;
-            minCount.textContent =  `${min} mins`;
-            secCount.textContent = `${sec} secs`;
+            hrCount.textContent = `${hr} HR`;
+            minCount.textContent =  `${min} Min`;
+            secCount.textContent = `${sec} Sec`;
         }
     }else{
         sec ++;
-        hrCount.textContent = `${hr} hours`;
-        minCount.textContent =  `${min} mins`;
-        secCount.textContent = `${sec} secs`;
+        hrCount.textContent = `${hr} HR`;
+        minCount.textContent =  `${min} Min`;
+        secCount.textContent = `${sec} Sec`;
     }
 }
 
@@ -106,10 +106,10 @@ clockButton.addEventListener('click', function() {
             clockButton.textContent = 'Clock Out'
             countStart = setInterval(() => {
                 timeChange();
-            }, 1);
+            }, 1000);
         }
     }else {
-        window.alert(`You worked ${hr} hours ${min} mins ${sec} secs. \n Good Job! Keep it up 💪`);
+        window.alert(`You worked ${hr} HR ${min} Min ${sec} Sec. \n Good Job! Keep it up 💪`);
         clearInterval(countStart);
         updateWorkHour();
         cleanPage();
