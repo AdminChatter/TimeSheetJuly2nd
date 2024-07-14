@@ -44,7 +44,6 @@ const selectListValue = () => {
 selectList.addEventListener('change', function (event) {
     event.preventDefault();
     currentCompany = selectList.value;
-    console.log(currentCompany)
 });
 
 //display the time and change the value
@@ -92,9 +91,7 @@ const updateWorkHour = () => {
     for (let i = 0;  i < existingData.length; i++){
         if(existingData[i].company === currentCompany){
             existingData[i].workhour += hr;
-            console.log(existingData[i].workhour)
             window.localStorage.setItem('payInfo',JSON.stringify(existingData))
-            console.log(JSON.parse(localStorage.getItem('payInfo')))
         }
     }
 }

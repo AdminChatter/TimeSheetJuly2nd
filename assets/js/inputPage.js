@@ -16,33 +16,34 @@ const validInput = (payrate, company) => {
         return true;
     }
 }
+
 //Check if the company already exists. If it does, check if the payrate is the same. If yes, update the payrate
 const companyExist = (payInfo) => {
     let existingData = localStorage.getItem('payInfo');
     if (!existingData){
+        window.alert(`Company ${payInfo.company} has been added`);
         return false;
     }else{
         existingData = JSON.parse(existingData);
         for (let i = 0; i < existingData.length; i++) {
-            if (existingData[i].company == payInfo.company){
-                if (existingData[i].payrate == payInfo.payrate){
+            if (existingData[i].company === payInfo.company){
+                if (existingData[i].payrate === payInfo.payrate){
                     window.alert(`The company already exist.`);
                     return true;
-                }else if (existingData[i].payrate != payInfo.payrate){
+                }else if (existingData[i].payrate !== payInfo.payrate){
                     window.alert(`The payrate for this company has been updated`);
-                    existingData[i].payrate = payInfo.payrate;
+                    existingData[i].payrate === payInfo.payrate;
                     localStorage.setItem('payInfo',JSON.stringify([payInfo]));
                     return true;
-                }else {
-                    return false;
                 }
             }else{
                 window.alert(`Company ${payInfo.company} has been added`);
-                return false;
             }
         }
+        return false
     }
 }
+
 //Store the valid input value into localstorage
 const storeInput = (payInfo) => {
     let existingData = localStorage.getItem('payInfo');
@@ -54,6 +55,7 @@ const storeInput = (payInfo) => {
         localStorage.setItem('payInfo',JSON.stringify([payInfo]));
     }
 }
+
 //Handles the form submission. Grab the form data and store it in local storage
 const formSubmission = (event) => {
     event.preventDefault();
@@ -73,5 +75,6 @@ const formSubmission = (event) => {
         }
     }
 }
+
 //Call the function to handle the form submission
 form.addEventListener('submit', formSubmission)
