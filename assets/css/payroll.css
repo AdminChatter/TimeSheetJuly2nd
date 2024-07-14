@@ -52,6 +52,13 @@ nav a {
     background-repeat: no-repeat;
 }
 
+nav a:hover {
+    color: yellow;
+    text-shadow: 2px 2px 2px rgb(97, 13, 207);
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -60,6 +67,25 @@ main {
     top: 100px;
     height: 100%;
     width: 100%;
+}
+
+.payrollContainer {
+    width: 670px;
+    height: 430px;
+    border: solid 3px rgb(11, 211, 44);
+    box-shadow: 2px 0 4px rgb(11, 211, 44);
+    background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.payrollContainer p {
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
 #listContainer {
@@ -84,25 +110,6 @@ main {
     margin-left: 10px;
     width: 130px;
     margin-bottom: 15px;
-}
-
-.payrollContainer {
-    width: 670px;
-    height: 430px;
-    border: solid 3px rgb(11, 211, 44);
-    box-shadow: 2px 0 4px rgb(11, 211, 44);
-    background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.payrollContainer p {
-    display: flex;
-    justify-content: center;
-    color: white;
 }
 
 .payrollInfo {
