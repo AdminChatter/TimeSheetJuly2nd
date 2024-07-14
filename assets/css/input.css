@@ -52,10 +52,18 @@ nav a {
     background-repeat: no-repeat;
 }
 
+nav a:hover {
+    color: yellow;
+    text-shadow: 2px 2px 2px rgb(97, 13, 207);
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     top: 100px;
     height: 100%;
     width: 100%;
@@ -72,7 +80,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 
 }
 
@@ -121,13 +129,6 @@ form {
     transform: none;
 }
 
-nav a:hover {
-    color: yellow;
-    text-shadow: 2px 2px 2px rgb(97, 13, 207);
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-}
-
 @media screen and (max-width: 920px) {
     header {
         flex-flow: column wrap;
@@ -149,6 +150,7 @@ nav a:hover {
     nav a {
         margin: 5px;
     }
+
     .formBox {
         text-align: center;
         max-width: 85%;
@@ -182,5 +184,4 @@ nav a:hover {
         margin: 20px auto 20px auto;
         box-sizing: border-box;
     }
-
 }
