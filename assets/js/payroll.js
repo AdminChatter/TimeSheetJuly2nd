@@ -1,3 +1,4 @@
+//this is the js file for the payroll page
 document.addEventListener('DOMContentLoaded', () => {
     const hoursWorked = document.getElementById('hoursWorked');
     const payRate = document.getElementById('payRate');

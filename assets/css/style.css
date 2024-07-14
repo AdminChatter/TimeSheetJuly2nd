@@ -70,6 +70,13 @@ main {
     width: 100%;
 }
 
+.modal-body {
+    position: relative;
+    top: 0px;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
 .card {
     width: 670px;
     height: 430px;
@@ -194,6 +201,4 @@ main {
         margin: 20px auto 20px auto;
         height: 30%;
     }
-
-
 }
