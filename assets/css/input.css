@@ -129,6 +129,19 @@ form {
     transform: none;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top:180px;
+}
+
+footer p {
+    font-size: large;
+}
+
 @media screen and (max-width: 920px) {
     header {
         flex-flow: column wrap;
