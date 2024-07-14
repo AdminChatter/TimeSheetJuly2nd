@@ -36,10 +36,9 @@ const companyExist = (payInfo) => {
                     localStorage.setItem('payInfo',JSON.stringify([payInfo]));
                     return true;
                 }
-            }else{
-                window.alert(`Company ${payInfo.company} has been added`);
             }
         }
+        window.alert(`Company ${payInfo.company} has been added`);
         return false
     }
 }

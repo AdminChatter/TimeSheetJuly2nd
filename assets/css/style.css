@@ -85,10 +85,12 @@ main {
 }
 
 .timerContainer {
+    color: aliceblue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
-    right: 180px;
     width: 100%;
 }
 
