@@ -2,7 +2,7 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+We created a payroll web application for an employee to track payroll for which company/companies they work(ed) for. It was also created to clock in or out,  enter hours, payrate, and total income.
 
 - What was your motivation?
    -  We chose this Timesheet to be our project because it's something that would be useful and secure for many workers in a daily basis, being able to render in many different screen sizes.
@@ -30,21 +30,25 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+To enter the employees hours you would select the "Company" from the drop-down list on the "Time Card" tab. Then you would click the "Clock In/Clock Out" button. Next, you would go to the "Input" tab. Here the employee would enter in the company name and payrate. After the employee clicked the "Submit" button. They would select the company from the drop-down on the "Payroll" tab. This would then show the employee their total "Hours", "Payrate", and "Total Income."
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Cameron Bukoski, XiangZhen(Jason) Wu, Leonardo Reis, and Justin Hebenstreit
+
+Cameron GitHub: - [text](https://github.com/LGX10)
+
+Jason GitHub: - [text](https://github.com/AdminChatter)
+
+Leonardo GitHub: - [text](https://github.com/Reisleo99)
+
+Justin GitHub: - [text](https://github.com/JHebenstreit48)
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
-If you followed tutorials, include links to those here as well.
+External sites used:
+
+[text](https://code.visualstudio.com/docs/languages/markdown)
 
 ## License
 
