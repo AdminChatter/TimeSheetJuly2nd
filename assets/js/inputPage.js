@@ -26,6 +26,7 @@ const companyExist = (payInfo) => {
     }else{
         existingData = JSON.parse(existingData);
         for (let i = 0; i < existingData.length; i++) {
+            console.log(i);
             if (existingData[i].company === payInfo.company){
                 if (existingData[i].payrate === payInfo.payrate){
                     window.alert(`The company already exist.`);
