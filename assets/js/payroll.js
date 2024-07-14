@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
     const hoursWorked = document.getElementById('hoursWorked');
     const payRate = document.getElementById('payRate');
     const totalIncome = document.getElementById('totalIncome');
@@ -26,9 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to calculate and display payroll information
     const calculatePayroll = (hours, pay) => {
-        console.log('in calculate')
         let income = hours * pay;
-        console.log(income)
         hoursWorked.textContent = `Hours: ${hours}`;
         payRate.textContent = `Payrate: ${pay.toFixed(2)}`;
         totalIncome.textContent = `Total Income: ${income.toFixed(2)}`;
@@ -48,12 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for the select list change
     selectList.addEventListener('change', (event) => {
-        console.log("in change")
         const selectedCompany = event.target.value;
-        console.log(selectedCompany)
         const payInfo = JSON.parse(localStorage.getItem('payInfo')) || [];
         const companyInfo = payInfo.find(info => info.company === selectedCompany);
-        console.log(companyInfo)
 
         if (companyInfo) {
             const hoursWorked = getWorkedHours(selectedCompany); // Get total hours worked from local storage
@@ -62,13 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Function that runs when the page loads
     const initial = () => {
         let currentCompany = document.getElementById('companyList').value;
-        console.log("in initial")
         const payInfo = JSON.parse(localStorage.getItem('payInfo')) || [];
-        console.log(currentCompany)
         const companyInfo = payInfo.find((element) => element.company == currentCompany);
-        console.log(companyInfo)
 
         if (companyInfo) {
             const hoursWorked = getWorkedHours(currentCompany); // Get total hours worked from local storage
