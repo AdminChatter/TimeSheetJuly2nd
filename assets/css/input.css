@@ -56,7 +56,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     top: 100px;
     height: 100%;
     width: 100%;
@@ -64,47 +63,53 @@ main {
 
 .formBox {
     width: 670px;
-    height: 415px;
+    height: 430px;
     border: solid 3px rgb(11, 211, 44);
     box-shadow: 2px 0 4px rgb(11, 211, 44);
     background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
     border-radius: 12px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+
 }
 
 form {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     color: white;
-    left: 150px;
-    top: 90px;
 }
 
 #companyName {
+    display: flex;
     border-radius: 7px;
     width: 300px;
     height: 50px;
 }
 
 #payRate {
+    display: flex;
     border-radius: 7px;
     width: 300px;
     height: 50px;
 }
 
 #submit {
-    position: relative;
-    left: 99px;
-    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: grey;
     border: solid 2px rgb(255, 255, 255);
     color: white;
     width: 100px;
     height: 50px;
-    border-radius: 7px;
+    border-radius: 12px;
+    background-image: linear-gradient(to bottom, rgb(31, 28, 28), rgb(80, 78, 78), gray);
+    position: relative;
+    left: 32%;
 }
 
 #submit:hover {
@@ -170,9 +175,12 @@ nav a:hover {
     }
 
     .formBox {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         max-width: 85%;
         margin: 20px auto 20px auto;
+        box-sizing: border-box;
     }
 
 }
