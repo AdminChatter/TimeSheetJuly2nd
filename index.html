@@ -3,59 +3,79 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Time Sheet</title>
 
-    <link href="assets/css/reset.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="assets/css/reset.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
+
 </head>
 
 <body>
 
     <header>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Time Card</a> 
-            </li>
+        <h1>Time Card</h1>
 
-            <li>
-                <a href="payroll.html">Payroll</a>
-            </li>
+        <nav>
 
-            <li>
-                <a href="input.html">Input</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+            <ul>
+                <li>
+                    <a href="index.html">Time Card</a>
+                </li>
 
-<main>
-    <div class="bigBox">
-        <div class="card">
-            <div class="timer-container">
+                <li>
+                    <a href="payroll.html">Payroll</a>
+                </li>
+
+                <li>
+                    <a href="input.html">Input</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="card">
+
+            <div class="timerContainer">
+
                 <p id="hours"> 0 hours</p>
                 <p id="minutes">0 minutes</p>
                 <p id="seconds">0 seconds</p>
+
             </div>
-            <div class="bottom-container">
+
+            <div class="bottomContainer">
+
                 <label for="company">Company:</label>
+
                 <select class="company" id="companyList">
                     <!-- Options will go here -->
                 </select>
-                <button class="clockInOut" id="toggle"></button>
+
+                <button class="clockInOut" id="toggle">Clock in / Out</button>
+
             </div>
-        </div>
-    </div> 
 
-</main>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </main>
 
-    <script src="./assets/js/timeCard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <script src="assets/js/timeCard.js"></script>
 </body>
 
 </html>

@@ -106,7 +106,7 @@ clockButton.addEventListener('click', function() {
             clockButton.textContent = 'Clock Out'
             countStart = setInterval(() => {
                 timeChange();
-            }, 1000);
+            }, 1);
         }
     }else {
         window.alert(`You worked ${hr} hours ${min} mins ${sec} secs. \n Good Job! Keep it up 💪`);

@@ -32,8 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         hoursWorked.textContent = `Hours: ${hours}`;
         payRate.textContent = `Payrate: ${pay.toFixed(2)}`;
         totalIncome.textContent = `Total Income: ${income.toFixed(2)}`;
-    };
-
+    }
+    const getWorkedHours = (company) => {
+        let hour = 0
+        const existingData = JSON.parse(localStorage.getItem('payInfo'));
+        for (let i = 0;  i < existingData.length; i++){
+            if(existingData[i].company === company){
+                hour = existingData[i]. workhour;
+            }
+            return hour;
+        }}
+    
     // Initialize the select list with companies
     selectListValue();
 
@@ -43,13 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedCompany = event.target.value;
         console.log(selectedCompany)
         const payInfo = JSON.parse(localStorage.getItem('payInfo')) || [];
-
         const companyInfo = payInfo.find(info => info.company === selectedCompany);
         console.log(companyInfo)
 
         if (companyInfo) {
-            // Assuming hoursWorked is obtained from another source (timecard.js)
-            const hoursWorked = 40; // Placeholder value, replace with actual value
+            const hoursWorked = getWorkedHours(selectedCompany); // Get total hours worked from local storage
             const payRate = parseFloat(companyInfo.payrate);
             calculatePayroll(hoursWorked, payRate);
         }
@@ -64,9 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(companyInfo)
 
         if (companyInfo) {
-            console.log("in if")
-            // Assuming hoursWorked is obtained from another source (timecard.js)
-            const hoursWorked = 40; // Placeholder value, replace with actual value
+            const hoursWorked = getWorkedHours(currentCompany); // Get total hours worked from local storage
             const payRate = parseFloat(companyInfo.payrate);
             calculatePayroll(hoursWorked, payRate);
         }
