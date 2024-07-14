@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const payInput = document.getElementById('payRate');
 const companyInput = document.getElementById('companyName');
+
 //Check the validation of the input
 const validInput = (payrate, company) => {
     if (!payrate){
@@ -27,16 +28,15 @@ const companyExist = (payInfo) => {
         existingData = JSON.parse(existingData);
         for (let i = 0; i < existingData.length; i++) {
             console.log(i);
-            if (existingData[i].company === payInfo.company){
-                if (existingData[i].payrate === payInfo.payrate){
-                    window.alert(`The company already exist.`);
-                    return true;
-                }else if (existingData[i].payrate !== payInfo.payrate){
-                    window.alert(`The payrate for this company has been updated`);
-                    existingData[i].payrate === payInfo.payrate;
-                    localStorage.setItem('payInfo',JSON.stringify([payInfo]));
-                    return true;
-                }
+            if (existingData[i].company === payInfo.company && existingData[i].payrate === payInfo.payrate){
+                window.alert(`The company already exist.`);
+                return true;
+            }else if (existingData[i].company === payInfo.company && existingData[i].payrate !== payInfo.payrate){
+                window.alert(`The payrate for this company has been updated`);
+                existingData[i].payrate = payInfo.payrate;
+                console.log(existingData);
+                localStorage.setItem('payInfo',JSON.stringify(existingData));
+                return true;
             }
         }
         window.alert(`Company ${payInfo.company} has been added`);
