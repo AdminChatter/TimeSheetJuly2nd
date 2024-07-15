@@ -74,6 +74,19 @@ form {
     color: white;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top:180px;
+}
+
+footer p {
+    font-size: large;
+}
+
 .formBox {
     width: 670px;
     height: 430px;
@@ -131,19 +144,6 @@ form {
 
 #submit:active {
     transform: none;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-    top:180px;
-}
-
-footer p {
-    font-size: large;
 }
 
 @media screen and (max-width: 920px) {

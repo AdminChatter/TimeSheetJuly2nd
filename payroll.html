@@ -15,27 +15,25 @@
 
 </head>
 
-<!-- the replacement for alertmessage -->
-<aside class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-    <section class="modal-dialog">
-        <article class="modal-content">
-            <header class="modal-header">
-                <h5 class="modal-title" id="alertModalLabel">Alert</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="xButton">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </header>
-            <main class="modal-body">
-                <p id="alertMessage">This is an alert message.</p>
-            </main>
-            <footer class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="okButton">OK</button>
-            </footer>
-        </article>
-    </section>
-</aside>
-
 <body>
+    <!-- Alert Modal -->
+    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertModalLabel">Alert</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="alertMessage">This is an alert message.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <header>
         <h1>Payroll</h1>
         <nav>

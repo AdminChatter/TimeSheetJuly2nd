@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,43 +8,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/input.css" />
 </head>
-
-<!-- the replacement for alertmessage -->
-<aside class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-    <section class="modal-dialog">
-        <article class="modal-content">
-            <header class="modal-header">
-                <h5 class="modal-title" id="alertModalLabel">Alert</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="xButton">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </header>
-            <main class="modal-body">
-                <p id="alertMessage">This is an alert message.</p>
-            </main>
-            <footer class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="okButton">OK</button>
-            </footer>
-        </article>
-    </section>
-</aside>
-
 <body>
+    <!-- Alert Modal -->
+    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertModalLabel">Alert</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="alertMessage">This is an alert message.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <h1>Input</h1>
         <nav>
             <ul>
-                <li>
-                    <a href="index.html">Time Card</a>
-                </li>
-
-                <li>
-                    <a href="payroll.html">Payroll</a>
-                </li>
-
-                <li>
-                    <a href="input.html">Input</a>
-                </li>
+                <li><a href="index.html">Time Card</a></li>
+                <li><a href="payroll.html">Payroll</a></li>
+                <li><a href="input.html">Input</a></li>
             </ul>
         </nav>
     </header>
@@ -75,5 +62,4 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/inputPage.js"></script>
 </body>
-
 </html>
