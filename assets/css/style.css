@@ -143,7 +143,8 @@ footer p {
     background-image: linear-gradient(to bottom, rgb(43, 39, 39), rgb(126, 122, 122), gray);
     border: solid 2px rgb(255, 255, 255);
     margin-right: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 .clockInOut {
@@ -154,8 +155,9 @@ footer p {
     height: 50px;
     border: solid 2px rgb(255, 255, 255);
     background-image: linear-gradient(to bottom, rgb(43, 39, 39), rgb(126, 122, 122), gray);
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 7px;
+    font-weight: bold;
 }
 
 .clockInOut:hover {
