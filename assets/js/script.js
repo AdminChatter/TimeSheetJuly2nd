@@ -15,5 +15,3 @@ xCloseButton.addEventListener('click', function(){
 okCloseButton.addEventListener('click', function(){
     $('#alertModal').modal('hide');
 });
-
-

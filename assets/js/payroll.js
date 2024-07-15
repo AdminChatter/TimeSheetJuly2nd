@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         payRate.textContent = `Payrate: ${pay.toFixed(2)}`;
         totalIncome.textContent = `Total Income: ${income.toFixed(2)}`;
     }
+
+    // Function to get the total hours worked for a company
     const getWorkedHours = (company) => {
         let hour = 0
         const existingData = JSON.parse(localStorage.getItem('payInfo'));
@@ -39,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 hour = existingData[i]. workhour;
             }
             return hour;
-        }}
+        }
+    }
     
     // Initialize the select list with companies
     selectListValue();
@@ -64,11 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const companyInfo = payInfo.find((element) => element.company == currentCompany);
 
         if (companyInfo) {
-            const hoursWorked = getWorkedHours(currentCompany); // Get total hours worked from local storage
+            const hoursWorked = getWorkedHours(currentCompany); 
             const payRate = parseFloat(companyInfo.payrate);
             calculatePayroll(hoursWorked, payRate);
         }
     }
 
     initial();
-    });
+});
