@@ -1,3 +1,4 @@
+//this script is for the time card page
 let selectList = document.getElementById('companyList');
 const clockButton = document.getElementById('toggle');
 const hrCount = document.getElementById('hours');
@@ -100,7 +101,7 @@ const updateWorkHour = () => {
 clockButton.addEventListener('click', function() {
     if (clockButton.textContent === 'Clock In'){
         if (currentCompany === 'N/A'){
-            window.alert('No company selected.\n Please go to input page to enter your company!')
+            showAlert('No company selected.\n Please go to input page to enter your company!');
             return;
         }else {
             clockButton.textContent = 'Clock Out'
@@ -109,7 +110,7 @@ clockButton.addEventListener('click', function() {
             }, 1000);
         }
     }else {
-        window.alert(`You worked ${hr} HR ${min} Min ${sec} Sec. \n Good Job! Keep it up 💪`);
+        showAlert(`You worked ${hr} HR ${min} Min ${sec} Sec. \n Good Job! Keep it up 💪`);
         clearInterval(countStart);
         updateWorkHour();
         cleanPage();

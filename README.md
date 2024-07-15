@@ -2,76 +2,76 @@
 
 ## Description
 
-We created a payroll web application for an employee to track payroll for which company/companies they work(ed) for. It was also created to clock in or out,  enter hours, payrate, and total income.
+The Time Sheet Application is a web-based tool designed to help users track work hours, manage payroll information, and input company details. This application leverages Bootstrap for responsive design and localStorage for persistent data management, providing a user-friendly interface for handling timesheets and payroll information.
 
-- What was your motivation?
-   -  We chose this Timesheet to be our project because it's something that would be useful and secure for many workers in a daily basis, being able to render in many different screen sizes.
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-   - This project is a helping tool for a worker to be rightfully paid by the company they work for. Using HTML, CSS and JavaScript
-- What problem does it solve?
-   -  On this APP, the user will:
-     -Type in the company that they work for and the payrate from the company;
-     -Clock in/out to determine how many hours the person has worked;
-     -See how many hours and the total income for the company they worked for.
-- What did you learn?
-     -Leo: Have learned a lot of javascript and its relation to html; learned how to store and retrieve data using localStorage; learned about event handling in JavaScript, Data Parsing and Manipulation, etc.
-## Table of Contents (Optional)
+- What was your motivation?<br>
+   We chose this Timesheet to be our project because it's something that would be useful and secure for many workers in a daily basis, being able to render in many different screen sizes.<br><br>
+- Why did you build this project? (Note: the answer is not "Because it was a homework   assignment.")<br>
+   This project is a helping tool for a worker to be rightfully paid by the company they work for. Using HTML, CSS and JavaScript<br><br>
+- What problem does it solve?<br>
+   The Time Sheet Application addresses the common challenges of manually tracking work hours, calculating payroll, and storing company pay rate information. It eliminates the need for paper-based records and manual calculations, reducing errors and saving time for users. The application provides a centralized platform to record work hours, calculate payroll, and manage company data efficiently.<br><br>
+- What did you learn?<br>
+   Leo: Have learned a lot of javascript and its relation to html; learned how to store and retrieve data using localStorage; learned about event handling in JavaScript, Data Parsing and Manipulation, etc.<br>
+   Jason: During the development of the Time Sheet Application, I significantly enhanced my understanding of HTML, CSS, and JavaScript, particularly through debugging and problem-solving. One of the key concepts I learned was Bootstrap. Its class model proved invaluable, especially in replacing console alert messages with more user-friendly and aesthetically pleasing modal dialogs.<br>
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
+- [Badge](#badges)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+   1. Clone the repository <br>
+   'git clone https://github.com/AdminChatter/TimeSheetJuly2nd.git'
+   2. Navigate to the project directory: <br>
+   'cd timesheet-application'
+   3. Open index.html in your preferred web browser to start the application.<br><br>
 
 ## Usage
 
-To enter the employees hours you would select the "Company" from the drop-down list on the "Time Card" tab. Then you would click the "Clock In/Clock Out" button. Next, you would go to the "Input" tab. Here the employee would enter in the company name and payrate. After the employee clicked the "Submit" button. They would select the company from the drop-down on the "Payroll" tab. This would then show the employee their total "Hours", "Payrate", and "Total Income."
+   1. Time Card Page: Track your work hours by selecting a company and using the Clock In/Out feature. The time worked will be recorded and displayed.
+   2. Input Page: Add new companies and their respective pay rates. This data is stored locally for future reference.
+   3. Payroll Page: View the total hours worked and calculate the payroll for each company based on the recorded hours and pay rate.<br><br>
 
 ## Credits
+Made by Cameron Bukoski, XiangZhen(Jason) Wu, Leonardo Reis, and Justin Hebenstreit
 
-Cameron Bukoski, XiangZhen(Jason) Wu, Leonardo Reis, and Justin Hebenstreit
+   1. [Jason's GitHub](https://github.com/AdminChatter)
 
-Cameron GitHub: - [text](https://github.com/LGX10)
+   2. [Leonardo's GitHub](https://github.com/Reisleo99) 
 
-Jason GitHub: - [text](https://github.com/AdminChatter)
+   3. [Cameron's GitHub](https://github.com/LGX10)
 
-Leonardo GitHub: - [text](https://github.com/Reisleo99)
-
-Justin GitHub: - [text](https://github.com/JHebenstreit48)
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+   4. [Justin's GitHub](https://github.com/JHebenstreit48)
 
 External sites used:
 
-[text](https://code.visualstudio.com/docs/languages/markdown)
+   1. https://code.visualstudio.com/docs/languages/markdown
 
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+   2. https://getbootstrap.com/
 
 ## Badges
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+   ![badmathtoo](https://img.shields.io/badge/javascript-45%)
+   ![badmathtoo](https://img.shields.io/badge/html-35%)
+   ![badmathtoo](https://img.shields.io/badge/css-20%)
 
 ## Features
 
-If your project has a lot of features, list them here.
+- Responsive design using Bootstrap
+- Local storage for persistent data management
+- Real-time clock in/out feature
+- Payroll calculation based on recorded hours and pay rates
+- Alert modals for user notifications
 
 ## How to Contribute
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+   Contributions are welcome! Please follow these steps:
 
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+   1. Fork the repository.
+   2. Create a new branch (git checkout -b feature-branch).
+   3. Make your changes and commit (git commit -m 'Add new feature').
+   4. Push to the branch (git push origin feature-branch).
+   5. Open a pull request.

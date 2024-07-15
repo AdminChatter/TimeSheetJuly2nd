@@ -20,7 +20,6 @@ nav {
     margin-top: 45px;
     display: flex;
     justify-content: center;
-
 }
 
 nav ul {
@@ -69,6 +68,37 @@ main {
     width: 100%;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top:180px;
+}
+
+footer p {
+    font-size: large;
+}
+
+.companyInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: grey;
+    border: solid 2px rgb(255, 255, 255);
+}
+
+.modal-body {
+    position: relative;
+    top: 0px;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
 .payrollContainer {
     width: 670px;
     height: 430px;
@@ -94,17 +124,6 @@ main {
     align-items: center;
 }
 
-.companyInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 35px;
-    border-radius: 7px;
-    background-color: grey;
-    border: solid 2px rgb(255, 255, 255);
-}
-
 #companyList {
     display: flex;
     margin-left: 10px;
@@ -120,19 +139,6 @@ main {
     justify-content: space-evenly;
     align-items: center;
     font-size: larger;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-    top:180px;
-}
-
-footer p {
-    font-size: large;
 }
 
 @media screen and (max-width: 920px) {
@@ -155,6 +161,24 @@ footer p {
 
     nav a {
         margin: 5px;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10px;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+        top: 30px;
     }
 
     .payrollContainer {

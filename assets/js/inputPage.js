@@ -1,3 +1,4 @@
+// Description: This file contains the logic for the input page. It handles the form submission and stores the user input in local storage.
 const form = document.querySelector('form');
 const payInput = document.getElementById('payRate');
 const companyInput = document.getElementById('companyName');
@@ -5,13 +6,13 @@ const companyInput = document.getElementById('companyName');
 //Check the validation of the input
 const validInput = (payrate, company) => {
     if (!payrate){
-        window.alert('Missing Payrate Input!');
+        showAlert('Missing Payrate Input!');
         return false;
     }else if (!company){
-        window.alert('Missing Company Input!');
+        showAlert('Missing Company Input!');
         return false;
     }else if (isNaN(Number(payrate))){
-        window.alert('The payrate need to be an number.');
+        showAlert('The payrate need to be an number.');
         return false;
     } else {
         return true;
@@ -22,22 +23,22 @@ const validInput = (payrate, company) => {
 const companyExist = (payInfo) => {
     let existingData = localStorage.getItem('payInfo');
     if (!existingData){
-        window.alert(`Company ${payInfo.company} has been added`);
+        showAlert(`Company ${payInfo.company} has been added`);
         return false;
     }else{
         existingData = JSON.parse(existingData);
         for (let i = 0; i < existingData.length; i++) {
             if (existingData[i].company === payInfo.company && existingData[i].payrate === payInfo.payrate){
-                window.alert(`The company already exist.`);
+                showAlert(`The company already exist.`);
                 return true;
             }else if (existingData[i].company === payInfo.company && existingData[i].payrate !== payInfo.payrate){
-                window.alert(`The payrate for this company has been updated`);
+                showAlert(`The payrate for this company has been updated`);
                 existingData[i].payrate = payInfo.payrate;
                 localStorage.setItem('payInfo',JSON.stringify(existingData));
                 return true;
             }
         }
-        window.alert(`Company ${payInfo.company} has been added`);
+        showAlert(`Company ${payInfo.company} has been added`);
         return false
     }
 }
