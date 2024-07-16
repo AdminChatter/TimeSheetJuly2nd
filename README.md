@@ -6,7 +6,7 @@ The Time Sheet Application is a web-based tool designed to help users track work
 
 - What was your motivation?<br>
    We chose this Timesheet to be our project because it's something that would be useful and secure for many workers in a daily basis, being able to render in many different screen sizes.<br><br>
-- Why did you build this project? (Note: the answer is not "Because it was a homework   assignment.")<br>
+- Why did you build this project? <br>
    This project is a helping tool for a worker to be rightfully paid by the company they work for. Using HTML, CSS and JavaScript<br><br>
 - What problem does it solve?<br>
    The Time Sheet Application addresses the common challenges of manually tracking work hours, calculating payroll, and storing company pay rate information. It eliminates the need for paper-based records and manual calculations, reducing errors and saving time for users. The application provides a centralized platform to record work hours, calculate payroll, and manage company data efficiently.<br><br>
